@@ -1,0 +1,11 @@
+---
+auth0Domain: "dev-po5yskb8.us.auth0.com"
+auth0ClientId: "GFAgPV3T5E88MERa8ObA1PaChEQeXMNm"
+auth0ClientSecret: "EIRhkD0YIilsKuiyz8jdmlcr7dMaK9wUtCUmkhrTFMAP2IEhU-8UxhrytkTgrC0N"
+dbUrl: "jdbc:mariadb://localhost:3306/twitter"
+dbUser: "root"
+dbPassword: "root"
+dbMinPoolSize: 3
+dbMaxPoolSize: 25
+dbConnectionIdleTimeout: 3000
+maxTelematicsEventHandlerThreads: 10
