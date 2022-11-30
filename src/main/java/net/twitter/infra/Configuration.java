@@ -28,7 +28,7 @@ public class Configuration {
 
     public static Configuration instance() {
         if (instance == null) {
-            File file = new File("app.config.yml");
+            File file = new File("appconfig.yml");
             if (file.exists()) {
                 ObjectMapper om = new ObjectMapper(new YAMLFactory());
                 om.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);

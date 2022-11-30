@@ -1,8 +1,0 @@
----
-dbUrl: "jdbc:mariadb://localhost:3306/twitter"
-dbUser: "root"
-dbPassword: "root"
-dbMinPoolSize: 3
-dbMaxPoolSize: 25
-dbConnectionIdleTimeout: 3000
-maxTelematicsEventHandlerThreads: 10
