@@ -1,0 +1,1 @@
+INSERT INTO `user` (user_id, email, is_active) VALUES (:id , :email , :isActive);
