@@ -1,5 +1,7 @@
 Create TABLE `user` (
-    user_id VARCHAR(36) PRIMARY KEY,
+    id VARCHAR(36) PRIMARY KEY,
+    username VARCHAR(32),
     email VARCHAR(512) NOT NULL,
-    is_active BIT
+    is_active BIT,
+    profile_pic_url BLOB(65532)
     );
