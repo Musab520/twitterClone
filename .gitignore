@@ -28,7 +28,6 @@ nbdist/
 **/.DS_Store
 
 upload/
-**/checkstyle.xml
 **/appconfig.yml
 **/appconfig.yaml
 **/testconfig.override.yml
