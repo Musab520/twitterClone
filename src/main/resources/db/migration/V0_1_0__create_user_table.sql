@@ -3,5 +3,5 @@ Create TABLE `user` (
     username VARCHAR(32),
     email VARCHAR(512) NOT NULL,
     is_active BIT,
-    profile_pic_url BLOB(65532)
+    profile_pic_url VARCHAR(512)
     );

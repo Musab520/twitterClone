@@ -1,1 +1,1 @@
-Select * from `user` where user_id = :id;
+Select * from `user` where id = :id;
