@@ -2,9 +2,11 @@ package net.twitter;
 
 import io.javalin.Javalin;
 import io.javalin.core.validation.JavalinValidation;
+import net.twitter.dto.UserDto;
 import net.twitter.infra.App;
 import net.twitter.infra.Configuration;
 import net.twitter.provider.JdbiProvider;
+import net.twitter.repository.UserRepository;
 import net.twitter.route.Routes;
 import org.apache.commons.lang3.time.DateUtils;
 import org.eclipse.jetty.server.HttpConfiguration;
