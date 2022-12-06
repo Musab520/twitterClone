@@ -23,6 +23,7 @@ public class TwitterApp implements App {
 
     private static final Logger log = LoggerFactory.getLogger(App.class);
     private Javalin javalin;
+
     public void init(int port) {
         setupFlyway();
         setupJdbi();
