@@ -11,7 +11,7 @@ import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 public interface UserDao {
     @SqlUpdate
     @UseClasspathSqlLocator
-    void insert(@BindBean UserDto userDto);
+    void insert(@Bind("id") String id, @BindBean UserDto userDto);
 
     @SqlUpdate
     @UseClasspathSqlLocator
