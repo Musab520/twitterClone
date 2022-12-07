@@ -24,8 +24,8 @@ public class UserRepository {
         return daos().withUserDao((userDao) -> userDao.find(userId));
     }
 
-    public void insert(UserDto userDto) {
-        daos().useUserDao((userDao) -> userDao.insert(userDto));
+    public void insert(String id, UserDto userDto) {
+        daos().useUserDao((userDao) -> userDao.insert(id, userDto));
     }
 
     private void update(UserDto userDto) {
