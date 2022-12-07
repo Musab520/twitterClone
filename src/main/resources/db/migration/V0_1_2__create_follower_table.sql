@@ -1,5 +1,5 @@
 CREATE TABLE `follower` (
     id INT PRIMARY KEY,
-    followedId VARCHAR(36),
-    followerId VARCHAR(36)
+    followed_id VARCHAR(36),
+    follower_id VARCHAR(36)
 );
