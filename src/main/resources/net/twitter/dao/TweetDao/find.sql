@@ -1,1 +1,1 @@
-Select * from `tweet` where id = :id;
+SELECT * FROM `tweet` WHERE id = :id;
