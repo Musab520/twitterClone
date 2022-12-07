@@ -1,0 +1,1 @@
+SELECT * FROM follower WHERE followed_id=:followedId;
