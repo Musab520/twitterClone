@@ -1,5 +1,6 @@
 package net.twitter.provider;
 
+import net.twitter.dao.TweetDao;
 import net.twitter.dao.UserDao;
 
 import java.util.function.Consumer;
@@ -28,4 +29,13 @@ public class DaoProvider {
     public <T> T withUserDao(Function<UserDao, T> function) {
         return JdbiProvider.instance().jdbi().withExtension(UserDao.class, function::apply);
     }
+
+    public void useTweetDao(Consumer<TweetDao> consumer) {
+        JdbiProvider.instance().jdbi().useExtension(TweetDao.class, consumer::accept);
+    }
+
+    public <T> T withTweetDao(Function<TweetDao, T> function) {
+        return JdbiProvider.instance().jdbi().withExtension(TweetDao.class, function::apply);
+    }
+
 }
