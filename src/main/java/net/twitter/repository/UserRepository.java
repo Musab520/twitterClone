@@ -25,10 +25,10 @@ public class UserRepository {
     }
 
     public void insert(String id, UserDto userDto) {
-        daos().useUserDao((userDao) -> userDao.insert(id, userDto));
+        daos().useUserDao((userDao) -> userDao.insert(userDto));
     }
 
-    private void update(UserDto userDto) {
-        daos().useUserDao((userDao) -> userDao.update(userDto));
+    private void update(String id, UserDto userDto) {
+        daos().useUserDao((userDao) -> userDao.update(id, userDto));
     }
 }
