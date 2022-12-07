@@ -1,1 +1,1 @@
-SELECT * FROM follower WHERE followedId=:followedId;
+SELECT * FROM follower WHERE followed_id=:followedId;

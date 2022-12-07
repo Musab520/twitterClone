@@ -1,1 +1,1 @@
-INSERT INTO `follower` (id, followedId, followerId) VALUES (:id , :followedId , :followerId);
+INSERT INTO `follower` (id, followed_id, follower_id) VALUES (:id , :followedId , :followerId);
