@@ -13,22 +13,22 @@ public class UserRepository {
 
     }
 
-    private static UserRepository getInstance() {
+    public static UserRepository getInstance() {
         if (instance == null) {
             instance = new UserRepository();
         }
         return instance;
     }
 
-    private UserDto find(String userId) {
+    public UserDto find(String userId) {
         return daos().withUserDao((userDao) -> userDao.find(userId));
     }
 
-    public void insert(String id, UserDto userDto) {
+    public void insert(UserDto userDto) {
         daos().useUserDao((userDao) -> userDao.insert(userDto));
     }
 
-    private void update(String id, UserDto userDto) {
+    public void update(String id, UserDto userDto) {
         daos().useUserDao((userDao) -> userDao.update(id, userDto));
     }
 }
