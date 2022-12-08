@@ -6,10 +6,9 @@ import net.twitter.repository.UserRepository;
 
 public class UserService {
     private static UserService instance = null;
-    private final UserRepository userRepository;
 
-    public UserService() {
-        userRepository = UserRepository.getInstance();
+    private UserService() {
+
     }
 
     public static final UserService getInstance() {
@@ -20,14 +19,14 @@ public class UserService {
     }
 
     public void insert(UserDto userDto) {
-        userRepository.insert(userDto);
+        UserRepository.getInstance().insert(userDto);
     }
 
     public UserDto findUser(String id) {
-        return userRepository.find(id);
+        return UserRepository.getInstance().find(id);
     }
 
     public void update(String id, UserDto userDto) {
-        userRepository.update(id, userDto);
+        UserRepository.getInstance().update(id, userDto);
     }
 }
