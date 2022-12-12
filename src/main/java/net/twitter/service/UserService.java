@@ -18,7 +18,7 @@ public class UserService {
         return instance;
     }
 
-    public void insert(UserDto userDto) {
+    public void addUser(UserDto userDto) {
         UserRepository.getInstance().insert(userDto);
     }
 
@@ -26,7 +26,7 @@ public class UserService {
         return UserRepository.getInstance().find(id);
     }
 
-    public void update(String id, UserDto userDto) {
+    public void updateUser(String id, UserDto userDto) {
         UserRepository.getInstance().update(id, userDto);
     }
 }

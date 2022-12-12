@@ -2,11 +2,9 @@ package net.twitter;
 
 import io.javalin.Javalin;
 import io.javalin.core.validation.JavalinValidation;
-import net.twitter.dto.UserDto;
 import net.twitter.infra.App;
 import net.twitter.infra.Configuration;
 import net.twitter.provider.JdbiProvider;
-import net.twitter.repository.UserRepository;
 import net.twitter.route.Routes;
 import org.apache.commons.lang3.time.DateUtils;
 import org.eclipse.jetty.server.HttpConfiguration;
@@ -19,7 +17,10 @@ import org.slf4j.LoggerFactory;
 
 import java.text.ParseException;
 import java.time.Instant;
-import java.util.*;
+import java.util.Date;
+
+import static io.javalin.apibuilder.ApiBuilder.path;
+import static io.javalin.apibuilder.ApiBuilder.post;
 
 public class TwitterApp implements App {
 

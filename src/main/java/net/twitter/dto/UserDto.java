@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserDto {
     private String id;
+    private String username;
     private String email;
     private boolean active;
+    private String profilePicUrl;
 }

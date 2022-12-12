@@ -1,5 +1,6 @@
 package net.twitter.dao;
 
+import com.auth0.json.mgmt.users.User;
 import net.twitter.dto.UserDto;
 import org.jdbi.v3.sqlobject.config.RegisterBeanMapper;
 import org.jdbi.v3.sqlobject.customizer.Bind;
@@ -19,5 +20,6 @@ public interface UserDao {
 
     @SqlQuery
     @UseClasspathSqlLocator
+    @RegisterBeanMapper(UserDto.class)
     UserDto find(@Bind("id") String userId);
 }
