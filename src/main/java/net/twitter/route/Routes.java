@@ -2,6 +2,7 @@ package net.twitter.route;
 
 import com.auth0.json.mgmt.users.User;
 import io.javalin.apibuilder.EndpointGroup;
+import net.twitter.controller.TweetController;
 import net.twitter.controller.UserController;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
@@ -14,6 +15,11 @@ public class Routes implements EndpointGroup {
             post(UserController::addUser);
             get("{userId}", UserController::findUser);
             put("{userId}", UserController::updateUser);
+        });
+
+        path("api/tweets", () -> {
+            get("{tweetId}", TweetController::findTweet);
+            post(TweetController::addTweet);
         });
     }
 }
