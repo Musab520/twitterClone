@@ -16,9 +16,10 @@ import java.util.logging.Logger;
 public class Configuration {
 
     private static Configuration instance = null;
-    private String auth0Domain;
-    private String auth0ClientId;
-    private String auth0ClientSecret;
+    private String auth0ClientId = "cli3nt";
+    private String auth0ClientSecret = "s3cret";
+    private String auth0Domain = "test.auth0";
+    private String requiredScope;
     private String dbUrl;
     private String dbUser;
     private String dbPassword;

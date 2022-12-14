@@ -2,10 +2,17 @@ package net.twitter;
 
 import io.javalin.Javalin;
 import io.javalin.core.validation.JavalinValidation;
+import io.javalin.http.staticfiles.Location;
+import io.javalin.plugin.rendering.vue.JavalinVue;
+import net.twitter.dto.UserDto;
 import net.twitter.infra.App;
 import net.twitter.infra.Configuration;
+import net.twitter.infra.JwtParser;
 import net.twitter.provider.JdbiProvider;
+import net.twitter.provider.JwtParserProvider;
 import net.twitter.route.Routes;
+import net.twitter.service.UserService;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.eclipse.jetty.server.HttpConfiguration;
 import org.eclipse.jetty.server.HttpConnectionFactory;
@@ -18,9 +25,13 @@ import org.slf4j.LoggerFactory;
 import java.text.ParseException;
 import java.time.Instant;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static io.javalin.apibuilder.ApiBuilder.path;
 import static io.javalin.apibuilder.ApiBuilder.post;
+import static net.twitter.infra.Auth0Plugin.useAuth0Plugin;
 
 public class TwitterApp implements App {
 
@@ -30,6 +41,7 @@ public class TwitterApp implements App {
     public void init(int port) {
         setupFlyway();
         setupJdbi();
+        setupJavalinVue();
         configureJavalin(port);
     }
 
@@ -61,6 +73,23 @@ public class TwitterApp implements App {
                 server.setConnectors(new ServerConnector[]{connector});
                 return server;
             });
+            config.accessManager(TwitterAccessManager.getInstance());
+            useAuth0Plugin(config, auth0config -> {
+                auth0config.setClientId(Configuration.instance().getAuth0ClientId());
+                auth0config.setClientSecret(Configuration.instance().getAuth0ClientSecret());
+                auth0config.setDomain(Configuration.instance().getAuth0Domain());
+                auth0config.setScopes(Configuration.instance().getRequiredScope());
+                auth0config.setAuth0Callback((token, jwsClaims) -> {
+                    UserDto userDto = new UserDto();
+                    userDto.setId(jwsClaims.getSubject());
+                    userDto.setEmail(jwsClaims.get("email", String.class));
+
+                    if (UserService.getInstance().findUser(jwsClaims.getSubject()) == null) {
+                        UserService.getInstance().addUser(userDto);
+                    }
+                    UserService.getInstance().updateUser(jwsClaims.getSubject(), userDto);
+                });
+            });
         });
         JavalinValidation.register(Date.class, (string) -> {
             try {
@@ -85,6 +114,22 @@ public class TwitterApp implements App {
     @Override
     public Javalin getJavalin() {
         return javalin;
+    }
+
+    private void setupJavalinVue() {
+        if (!StringUtils.isEmpty(System.getProperty("production"))) {
+            JavalinVue.rootDirectory(config -> {
+                config.externalPath("vue");
+            });
+        }
+        JavalinVue.stateFunction = ctx -> {
+            HashMap<String, String> userDetails = new HashMap<>();
+            userDetails.put("user_id", ctx.sessionAttribute("user_id"));
+            userDetails.put("email", ctx.sessionAttribute("email"));
+
+            UserDto currentUser = UserService.getInstance().findUser(ctx.sessionAttribute("user_id"));
+            return Map.of("userDetails", userDetails);
+        };
     }
 
 }

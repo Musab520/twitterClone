@@ -1,0 +1,141 @@
+<html style="overflow: auto">
+    <head>
+        <meta charset="utf8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+        <link href="/webjars/vuetify/2.6.6/dist/vuetify.css" rel="stylesheet" >
+        <script src="/webjars/vue/2.6.10/dist/vue.min.js"></script>
+        <script src="/webjars/vuetify/2.6.6/dist/vuetify.js"></script>
+        <script src="/webjars/chartjs/2.8.0/Chart.bundle.min.js"></script>
+        <script src="/webjars/equiptal/extensions/date-extensions.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <script src="config.js"></script>
+        @componentRegistration
+    </head>
+    <body>
+        <main id="main-vue" v-cloak>
+            <div v-if="!loading">
+                @routeComponent
+            </div>
+        </main>
+        <script>
+            window.equiptalEventHub = new Vue()
+
+            let vuetify = new Vuetify({
+                theme: {
+                    themes: {
+                        light: {
+                            primary: '#102338',
+                            secondary: '#F9A315',
+                            accent: '#D98912',
+                            info: '#367CA4',
+                            negative: '#F20C0C',
+                            success: '#4CAF50',
+                            blue: '#1976D2',
+                            'offer-new': '#F9A315',
+                            'offer-received': '#1976D2',
+                            'offer-accepted': '#4CAF50',
+                            'offer-rejected': '#FF5252',
+                            'offer-closed': '#e0e0e0',
+                        }
+                    },
+                }
+            });
+
+            let langPlugin = {
+                install: (Vue, options) => {
+                    window.equiptalLangs = {
+                        // Holds the translations obtained from server
+                        trans: {},
+                        // The translations locale
+                        locale: options.locale,
+                        // The fallback locale of translations
+                        fallbackLocale: options.defaultFallbackLocale,
+                        // The default server translations link
+                        transLink: options.defaultTransLink,
+                    }
+
+                    const trans = (key, replace = {}) => {
+
+                        let translation = key.split('.').reduce((t, i) => t ? t[i] : null, window.equiptalLangs.trans);
+                        for (let placeholder in replace) {
+                            translation = translation.replace(`:${placeholder}, replace[placeholder]`);
+                        }
+                        return translation ?? key.replace(".", " ")
+                    }
+
+                    const loadTrans = () => {
+                        fetch(window.location.origin + window.equiptalLangs.transLink).then(response => response.json())
+                                .then((data) => {
+                                    window.equiptalLangs.trans = data
+                                    window.equiptalEventHub.$emit("trans-loaded")
+                                })
+                    }
+
+                    const reloadTrans = (options) => {
+                        window.equiptalLangs = {
+                            // Holds the translations obtained from server
+                            trans: {},
+                            // The translations locale
+                            locale: options.locale,
+                            // The fallback locale of translations
+                            fallbackLocale: options.defaultFallbackLocale,
+                            // The default server translations link
+                            transLink: options.defaultTransLink,
+                        }
+                    }
+
+                    const isRtl = () => window.equiptalLangs.locale === 'ar'
+
+                    loadTrans()
+
+                    Vue.prototype.$trans = (key, replace = {}) => trans(key, replace)
+                    Vue.$trans = (key, replace = {}) => trans(key, replace)
+
+                    Vue.prototype.$isRtl = isRtl
+                    Vue.$isRtl = isRtl
+
+                    Vue.prototype.$reloadTrans = (options) => reloadTrans(options)
+                }
+            }
+
+            var app = new Vue({
+                el: "#main-vue",
+                data: function () {
+                    return {
+                        loading: true
+                    }
+                },
+                created() {
+                    window.equiptalEventHub.$on("trans-loaded", () => this.loading = false)
+                    window.equiptalEventHub.$on("language-changed", (payload) => {
+                        const locale = payload.locale
+                        this.$vuetify.rtl = locale === 'ar';
+
+                        window.location.reload()
+                    })
+
+                    const locale = sessionStorage.getItem('equiptal-lang-locale') ?? 'en';
+                    this.$vuetify.rtl = locale === 'ar'
+
+                    Vue.use(langPlugin, {
+                        defaultFallbackLocale: "en",
+                        defaultTransLink: `/lang/${locale}/lang.json`,
+                        locale
+                    })
+                },
+                vuetify
+            });
+        </script>
+    </body>
+    <script>
+        if(!!window.globalconfig?.matomoTagManagerUrl && window.globalconfig?.matomoTagManagerUrl.length>0 ) {
+            var _mtm = window._mtm = window._mtm || [];
+            _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=window.globalConfig.matomoTagManagerUrl; s.parentNode.insertBefore(g,s);
+        }
+    </script>
+
+
+</html>
