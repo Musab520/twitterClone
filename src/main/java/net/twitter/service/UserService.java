@@ -5,7 +5,7 @@ import net.twitter.dto.UserDto;
 import net.twitter.repository.UserRepository;
 
 public class UserService {
-    private static UserService instance = null;
+    public static UserService instance = null;
 
     private UserService() {
 
