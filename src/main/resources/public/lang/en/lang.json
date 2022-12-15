@@ -1,0 +1,459 @@
+{
+    "homepage": {
+        "navigation": {
+            "homepage": "HOMEPAGE",
+            "equipments": "Equipments",
+            "companies": "Companies",
+            "rfqs": "RFQ's",
+            "portal": "PORTAL",
+            "login": "Login",
+            "username": "username",
+            "userMenu": {
+                "profile": "Profile",
+                "companyInfo": "Company Info",
+                "myEquipments": "My Equipments",
+                "projectCollections": "Project Collections",
+                "history": "History",
+                "currentReservations": "Current Reservations",
+                "currentRentals": "Current Rentals",
+                "currentBids": "Current Bids",
+                "logout": "Logout"
+            }
+        },
+        "mainTitle": "EQUIPTAL",
+        "subTitle": "get all your equipments from",
+        "subTitleHighlight": "one place",
+        "searchButton": "Search",
+        "searchInputPlaceholder": "Search for anything...",
+        "mostPopular": "Most Popular",
+        "bulldozerCategory": "Bulldozer",
+        "truckCategory": "Truck",
+        "jcbCategory": "JCB",
+        "backhoeCategory": "Backhoe",
+        "caterpillerCategory": "Caterpiller"
+    },
+    "userNavigation": {
+        "companyInfo": "Company Info",
+        "myEquipments": "My Equipments",
+        "projectCollections": "Project Collections",
+        "history": "History",
+        "currentReservations": "Current Reservations",
+        "currentRentals": "Current Rentals",
+        "currentBids": "Current Bids"
+    },
+    "companyInfoPage": {
+        "name": "Company Name",
+        "location": "Location",
+        "description": "Description",
+        "mobileNumber": "Mobile Number",
+        "email": "Email",
+        "totalEquipments": "Total Equipments",
+        "availableEquipments": "Available Equipments",
+        "map": "Map",
+        "save": "SAVE"
+    },
+    "myEquipmentsPage": {
+        "searchPlaceholder": "Search..",
+        "sortFilterPlaceholder": "Sort",
+        "totalResults": "Total Results",
+        "filters": "Filters",
+        "clearFilters": "Clear Filters",
+        "typeFilterPlaceholder": "Type",
+        "manufacturerFilterPlaceholder": "Manufacturer",
+        "statusFilterPlaceholder": "Status",
+        "documentsAttachedFilter": "Documents Attached",
+        "equipmentCardDetails": {
+            "disableFlag": "Disable",
+            "modifyDocsButton": "Modify Docs"
+        },
+        "addNewEquipment": "Add New Equipment"
+    },
+    "modifyDocsDialog": {
+        "documentUpload": "Document Upload",
+        "typeSelect": "Type",
+        "fileName": "File Name",
+        "clickToAddFile": "Click to Add File.",
+        "sizeLimitMessage": "Your file should be in .pdf .excel .docs with less than 4MB size.",
+        "upload": "Upload",
+        "delete": "Delete",
+        "download": "Download",
+        "view": "View",
+        "close": "Close"
+    },
+    "misc": {
+        "loadingError": "An error has occurred while processing your request, please contact your administrator",
+        "noResultsFound": "No results found!"
+    },
+    "currentRentalPage": {
+        "searchPlaceholder": "Search..",
+        "sortFilterPlaceholder": "Sort",
+        "totalResults": "Total Results",
+        "filters": "Filters",
+        "clearFilters": "Clear Filters",
+        "typeFilterPlaceholder": "Type",
+        "manufacturerFilterPlaceholder": "Manufacturer",
+        "reserverFilterPlaceholder": "Reserver",
+        "equipmentCardDetails": {
+            "dateFrom": "From",
+            "dateTo": "To",
+            "daysLeft": "Days left",
+            "reserverFilterPlaceholder": "Reserver"
+        }
+    },
+    "historyPage": {
+        "searchPlaceholder": "Search..",
+        "sortFilterPlaceholder": "Sort",
+        "totalResults": "Total Results",
+        "filters": "Filters",
+        "clearFilters": "Clear Filters",
+        "typeFilterPlaceholder": "Type",
+        "manufacturerFilterPlaceholder": "Manufacturer",
+        "statusFilterPlaceholder": "Status",
+        "companyFilterPlaceholder": "Company",
+        "reservationButton": "RESERVATIONS",
+        "rentalButton": "RENTALS",
+        "equipmentCardDetailsForRental": {
+            "dateFrom": "From",
+            "dateTo": "To"
+        },
+        "equipmentCardDetailsForReservation": {
+            "dateFrom": "From",
+            "dateTo": "To",
+            "reserveAgainButton": "RESERVE AGAIN",
+            "currentlyUnavailableButton": "CURRENTLY UNAVAILABLE"
+        }
+    },
+    "currentReservationPage": {
+        "searchPlaceholder": "Search..",
+        "sortFilterPlaceholder": "Sort",
+        "totalResults": "Total Results",
+        "filters": "Filters",
+        "clearFilters": "Clear Filters",
+        "typeFilterPlaceholder": "Type",
+        "manufacturerFilterPlaceholder": "Manufacturer",
+        "statusFilterPlaceholder": "Status",
+        "companyFilterPlaceholder": "Company",
+        "equipmentCardDetails": {
+            "daysLeft": "Days left",
+            "dateFrom": "From",
+            "dateTo": "To",
+            "currentlyUnexpendableButton": "CURRENTLY UNEXPENDABLE",
+            "extendReservationButton": "EXTEND RESERVATION"
+        }
+    },
+    "equipmentsPage": {
+        "filters": "Filters",
+        "clearFilters": "Clear Filters",
+        "companyFilter": "Company",
+        "typeFilter": "Type",
+        "manufacturerFilter": "Manufacturer",
+        "workLocationFilter": "Work Location",
+        "fromFilter": "From",
+        "toFilter": "To",
+        "fromFilterCancelButton": "Cancel",
+        "fromFilterOkButton": "Ok",
+        "toFilterCancelButton": "Cancel",
+        "toFilterOkButton": "Ok",
+        "globalFilter": "Name, Company, Type, Manufacture...",
+        "sortLabel": "Sort",
+        "equipmentCard": {
+            "reserveButton": "Reserve",
+            "addToProjectButton": "Add to project"
+        },
+        "equipmentAddDialog": {
+            "addNewEquipment": "Add New Equipment",
+            "productionDate": "Production Date",
+            "licencePlate": "Licence Plate",
+            "registrationNumber": "Registration Number",
+            "licenceNumber": "Licence Number",
+            "manufacturer": "Manufacturer",
+            "serialNumber": "Serial Number",
+            "cancel": "Cancel",
+            "save": "Save"
+        },
+        "equipmentReserveDialog": {
+            "equipmentName": "Equipment Name",
+            "type": "Type",
+            "manufacturer": "Manufacturer",
+            "productionYear": "Production Year",
+            "reservationPeriod": "Reservation Period",
+            "clearDates": "Clear Dates",
+            "privetNote": "Privet Note",
+            "location": "Location",
+            "requestForReservationButton": "request for reservation"
+        },
+        "projectListDialog": {
+            "selectProject": "Select Project",
+            "needAnotherProjectList": "Need another Project List?",
+            "createNewOne": "Create New One",
+            "projectsListTable": {
+                "projectListName": "Project List",
+                "projectListFrom": "From",
+                "projectListTo": "To"
+            },
+            "close": "Close"
+        }
+    },
+    "projectCollectionsPage": {
+        "projectCollections": "Project Collections",
+        "searchPlaceholder": "Search..",
+        "createNewcollectionPlaceholder": "Create new collection",
+        "projectListCardDetails": {
+            "dateFrom": "From",
+            "dateTo": "To",
+            "editButton": "Edit",
+            "deleteButton": "Delete",
+            "deletionConfirmationTitle": "Project List Deletion Confirmation",
+            "deletionConfirmationDescription": "The project list will be deleted, please confirm to proceed?",
+            "confirmButton": "Confirm"
+        },
+        "projectListCreationDialog": {
+            "createNewProjectListTitle": "Create New Project List",
+            "listName": "List Name",
+            "reservationPeriod": "Reservation Period",
+            "clearDates": "CLEAR DATES",
+            "privetNote": "Privet Note",
+            "location": "Location:",
+            "createNewProjectListButton": "CREATE NEW PROJECT LIST"
+        }
+    },
+    "companiesPage": {
+        "companyName": "Company Name",
+        "sort": "Sort",
+        "location": "Location",
+        "companyCard": {
+            "location": "Location",
+            "totalEquipments": "Total Equipments",
+            "availableEquipments": "Available Equipments",
+            "companyProfile": "Company Profile"
+        }
+    },
+    "companyNavigation": {
+        "companyInfo": "Company Info",
+        "equipments": "Equipments"
+    },
+    "companyDetailsPage": {
+        "location": "Location",
+        "totalEquipments": "Total Equipments",
+        "availableEquipments": "Available Equipments",
+        "contactInfo": "Contact Info"
+    },
+    "companyEquipmentsPage": {
+        "search": "Search..",
+        "totalResults": "Total Results",
+        "filters": "Filters",
+        "clearFilters": "Clear Filters",
+        "typeFilter": "Type",
+        "manufacturerFilter": "Manufacturer",
+        "statusFilter": "Status",
+        "workLocationFilter": "Work Location",
+        "fromFilter": "From",
+        "clearFromFilter": "Clean",
+        "cancelFromFilter": "Cancel",
+        "okFromFilter": "Ok",
+        "toFilter": "To",
+        "clearToFilter": "Clear",
+        "cancelToFilter": "Cancel",
+        "okToFilter": "Ok",
+        "verifiedFilter": "Verified",
+        "governmentJobReadyFilter": "Government Job Ready",
+        "reserveButton": "Reserve"
+    },
+    "requestForQuotationNavigation": {
+        "quotation": "Quotation",
+        "bidding": "Bidding"
+    },
+    "quotationListingPage": {
+        "search": "Search..",
+        "type": "Type",
+        "manufacturer": "Manufacturer",
+        "havingOffers": "Having Offers",
+        "singleOffer": "Single Offer",
+        "showHideColumns": "SHOW/HIDE COLUMNS",
+        "selectColumns": "Select Columns",
+        "selectColumnsYouWantToView": "Select columns you want to view",
+        "close": "Close",
+        "save": "Save",
+        "createRfq": "CREATE RFQ",
+        "closeRfq": "CLOSE RFQ",
+        "closeRequest": "Close Request",
+        "closeRequestConfirmation": "Are you sure you want to close this request? ",
+        "closeRequestConfirmationCancel": "Cancel",
+        "closeRequestConfirmationClose": "Close",
+        "rfqListTableHeaders": {
+            "note": "Note",
+            "type": "Type",
+            "creationDate": "Creation Date",
+            "location": "Location",
+            "from": "From",
+            "to": "To",
+            "minProductionYear": "Min Production Year",
+            "manufacturer": "Manufacturer",
+            "offers": "Offers",
+            "status": "Status",
+            "actions": "Actions"
+        }
+    },
+    "requestForQuotationBiddingListPage": {
+        "search": "Search..",
+        "type": "Type",
+        "manufacturer": "Manufacturer",
+        "singleOffer": "Single Offer",
+        "showHideColumn": "SHOW/HIDE COLUMNS",
+        "selectColumns": "Select Columns",
+        "selectColumnsYouWantToView": "Select columns you want to view",
+        "close": "Close",
+        "save": "Save",
+        "applyNow": "apply Now",
+        "biddingListTableHeaders": {
+            "company": "Company",
+            "note": "Note",
+            "creationDate": "Creation Date",
+            "equipments": "Equipments",
+            "from": "From",
+            "to": "To",
+            "location": "Location",
+            "type": "Type",
+            "minProductionYear": "Min Production Year",
+            "manufacturer": "Manufacturer",
+            "status": "Status"
+        }
+    },
+    "requestForQuotationOffersPage": {
+        "back": "Back",
+        "search": "Search..",
+        "company": "Company",
+        "manufacturer": "Manufacturer",
+        "status": "Status",
+        "showHideColumns": "SHOW/HIDE COLUMNS",
+        "offersTableHeaders": {
+            "company": "Company",
+            "createDate": "Create Date",
+            "manufacturer": "Manufacturer",
+            "price": "Price",
+            "status": "Status",
+            "offeredEquipments": "Offered Equipments"
+        }
+    },
+    "requestForQuotationThreadPage": {
+        "backLinkToOffers": "Offers",
+        "backLinkToBidding": "Bidding",
+        "emptyThreadMessage": "Start by sending a message below to communicate..",
+        "sendNewMessageButton": "Send",
+        "sendNewMessageLabel": "Message",
+        "modifyEquipmentsThreadAction": {
+            "newEquipment": "new equipment",
+            "newEquipments": "new equipments",
+            "removeEquipment": "equipment",
+            "removeEquipments": "equipments",
+            "viewButton": "View",
+            "changeDetails": "Equipments Change Details",
+            "loadingEquipments": "Loading Equipment",
+            "close": "Close",
+            "added": "Added",
+            "removed": "Removed"
+        },
+        "updatePriceThreadAction": {
+            "updatePriceMessage": "updated price to"
+        },
+        "updateStatusReceivedThreadAction": {
+            "updateStatusMessage": "changed status to",
+            "receivedStatus": "Received"
+        },
+        "updateStatusAcceptedThreadAction": {
+            "updateStatusMessage": "changed status to",
+            "acceptedStatus": "Accepted"
+        },
+        "updateStatusRejectedThreadAction": {
+            "updateStatusMessage": "changed status to",
+            "rejectedStatus": "Rejected"
+        },
+        "updateStatusNewThreadAction": {
+            "updateStatusMessage": "changed status to",
+            "newStatus": "New"
+        },
+        "updateStatusClosedThreadAction": {
+            "updateStatusMessage": "changed status to",
+            "closedStatus": "Closed"
+        },
+        "updateEquipmentCountThreadAction": {
+            "message": "changed required Equipments from"
+        },
+        "equipmentsAndOffersSection": {
+            "heading": "equipments & offer",
+            "offeredEquipments": "Offered Equipments",
+            "totalPrice": "Total Price",
+            "equipments": "Equipments",
+            "noEquipmentsOfferedYet": "No equipments offered yet."
+        },
+        "myRequestSection": {
+            "heading": "my request",
+            "requestedRequipments": "Requested Equipments",
+            "type": "Type",
+            "from": "From",
+            "fromCancel": "Cancel",
+            "fromOk": "Ok",
+            "to": "To",
+            "toCancel": "Cancel",
+            "toOk": "Ok",
+            "manufacturer": "Manufacturer",
+            "productionYear": "Production Year",
+            "updateRequestButton": "Update request"
+        },
+        "myOfferSection": {
+            "heading": "My Offer",
+            "offeredEquipments": "Offered Equipments",
+            "from": "From",
+            "to": "To",
+            "location": "Location",
+            "type": "Type",
+            "totalPrice": "Total Price",
+            "saveButton": "Save"
+        },
+        "equipmentsSection": {
+            "heading": "Equipments",
+            "equipments": "Equipments",
+            "modifyEquipments": "modify equipments",
+            "totalEquipmentsThisThreadOffers": "Total Equipments this Thread Offers",
+            "rFQTotalRequestedEquipments": "RFQ Total Requested Equipments",
+            "rFQAcceptedEquipmentsUntilNow": "RFQ Accepted Equipments until now",
+            "modifyEquipmentsDialog": {
+                "selected": "Selected",
+                "search": "Search..",
+                "WeCouldNotFoundAnyEquipmentsToOfferForThisRFQ": "We could not found any equipments to offer for this RFQ!",
+                "cancel": "Cancel",
+                "confirm": "Confirm"
+            }
+        },
+        "requestSection": {
+            "heading": "Request"
+        }
+    },
+    "bidsPage": {
+        "search": "Search..",
+        "type": "Type",
+        "manufacturer": "Manufacturer",
+        "status": "Status",
+        "singleOfferOnly": "Single Offer Only",
+        "withPriceOnly": "With Price Only",
+        "showHideColumns": "SHOW/HIDE COLUMNS",
+        "selectColumns": "Select Columns",
+        "selectColumnsYouWantToView": "Select columns you want to view",
+        "close": "Close",
+        "save": "Save",
+        "bidsTableHeaders": {
+            "company": "Company",
+            "type": "Type",
+            "creationDate": "Creation Date",
+            "requestedEquipment": "Requested Equipment",
+            "offeredEquipment": "Offered Equipment",
+            "location": "Location",
+            "from": "From",
+            "to": "To",
+            "minProductionYear": "Min Production Year",
+            "manufacturer": "Manufacturer",
+            "price": "Price",
+            "status": "Status"
+        }
+    }
+}

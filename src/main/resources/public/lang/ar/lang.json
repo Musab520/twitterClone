@@ -1,0 +1,459 @@
+{
+    "homepage": {
+        "navigation": {
+            "homepage": "القائمة الرئيسية",
+            "equipments": "المعدات",
+            "companies": "الشركات",
+            "rfqs": "المناقصات",
+            "portal": "PORTAL",
+            "login": "تسجيل الدخول",
+            "username": "الاسم",
+            "userMenu": {
+                "profile": "الملف الشخصي",
+                "companyInfo": "معلومات الشركة",
+                "myEquipments": "معداتي",
+                "projectCollections": "مجموعات المشروع",
+                "history": "السجل",
+                "currentReservations": "الحجوزات الحالية",
+                "currentRentals": "الإيجارات الحالية",
+                "currentBids": "المناقصات الحالية",
+                "logout": "تسجيل الخروج"
+            }
+        },
+        "mainTitle": "EQUIPTAL",
+        "subTitle": "احصل على كافة احتياجاتك من المعدات من",
+        "subTitleHighlight": "مكان واحد",
+        "searchButton": "بحث",
+        "searchInputPlaceholder": "ابحث عن اي شئ...",
+        "mostPopular": "شائعة",
+        "bulldozerCategory": "جرافة",
+        "truckCategory": "شاحنة",
+        "jcbCategory": "JCB",
+        "backhoeCategory": "حفار",
+        "caterpillerCategory": "تراكتور"
+    },
+    "userNavigation": {
+        "companyInfo": "معلومات الشركة",
+        "myEquipments": "معداتي",
+        "projectCollections": "مجموعات المشروع",
+        "history": "السجل",
+        "currentReservations": "الحجوزات الحالية",
+        "currentRentals": "الإيجارات الحالية",
+        "currentBids": "المناقصات الحالية"
+    },
+    "companyInfoPage": {
+        "name": "اسم الشركة",
+        "location": "الموقع",
+        "description": "نبذه عن الشركة",
+        "mobileNumber": "رقم الهاتف",
+        "email": "ألبريد الالكتروني",
+        "totalEquipments": "إجمالي المعدات",
+        "availableEquipments": "المعدات المتوفرة",
+        "map": "الموقع على الخريطة",
+        "save": "حفظ"
+    },
+    "myEquipmentsPage": {
+        "searchPlaceholder": "بحث..",
+        "sortFilterPlaceholder": "ترتيب",
+        "totalResults": "اجمالي النتائج",
+        "filters": "تصفية",
+        "clearFilters": "ازالة التصفية",
+        "typeFilterPlaceholder": "النوع",
+        "manufacturerFilterPlaceholder": "المصنع",
+        "statusFilterPlaceholder": "الحالة",
+        "documentsAttachedFilter": "المستندات المرفقة",
+        "equipmentCardDetails": {
+            "disableFlag": "تعطيل",
+            "modifyDocsButton": "تعديل الوثائق"
+        },
+        "addNewEquipment": "اضافة معدة جديدة"
+    },
+    "modifyDocsDialog": {
+        "documentUpload": "تحميل الوثيقة",
+        "typeSelect": "النوع",
+        "fileName": "اسم الملف",
+        "clickToAddFile": "انقر لإضافة ملف.",
+        "sizeLimitMessage": "يجب أن يكون ملفك بتنسيق .pdf .excel .docs يقل حجمه عن 4 ميغابايت.",
+        "upload": "تحميل",
+        "delete": "حذف",
+        "download": "تنزيل",
+        "view": "عرض",
+        "close": "اغلاق"
+    },
+    "misc": {
+        "loadingError": "حدث خطأ أثناء معالجة طلبك ، يرجى الاتصال بالمسؤول",
+        "noResultsFound": "لم يتم العثور على نتائج!"
+    },
+    "currentRentalPage": {
+        "searchPlaceholder": "بحث..",
+        "sortFilterPlaceholder": "ترتيب",
+        "totalResults": "اجمالي النتائج",
+        "filters": "تصفية",
+        "clearFilters": "ازالة التصفية",
+        "typeFilterPlaceholder": "النوع",
+        "manufacturerFilterPlaceholder": "المصنع",
+        "reserverFilterPlaceholder": "المستأجر",
+        "equipmentCardDetails": {
+            "dateFrom": "من تاريح",
+            "dateTo": "حتى تاريخ",
+            "daysLeft": "الايام المتبقية",
+            "reserverFilterPlaceholder": "المستأجر"
+        }
+    },
+    "historyPage": {
+        "searchPlaceholder": "بحث..",
+        "sortFilterPlaceholder": "ترتيب",
+        "totalResults": "اجمالي النتائج",
+        "filters": "تصفية",
+        "clearFilters": "ازالة التصفية",
+        "typeFilterPlaceholder": "النوع",
+        "manufacturerFilterPlaceholder": "المصنع",
+        "statusFilterPlaceholder": "الحالة",
+        "companyFilterPlaceholder": "الشركة",
+        "reservationButton": "الحجوزات",
+        "rentalButton": "الإيجارات",
+        "equipmentCardDetailsForRental": {
+            "dateFrom": "من تاريح",
+            "dateTo": "حتى تاريخ"
+        },
+        "equipmentCardDetailsForReservation": {
+            "dateFrom": "من تاريح",
+            "dateTo": "حتى تاريخ",
+            "reserveAgainButton": "احجز مرة اخرى",
+            "currentlyUnavailableButton": "الحجز غير متاح"
+        }
+    },
+    "currentReservationPage": {
+        "searchPlaceholder": "بحث..",
+        "sortFilterPlaceholder": "ترتيب",
+        "totalResults": "اجمالي النتائج",
+        "filters": "تصفية",
+        "clearFilters": "ازالة التصفية",
+        "typeFilterPlaceholder": "النوع",
+        "manufacturerFilterPlaceholder": "المصنع",
+        "statusFilterPlaceholder": "الحالة",
+        "companyFilterPlaceholder": "الشركة",
+        "equipmentCardDetails": {
+            "daysLeft": "الايام المتبقية",
+            "dateFrom": "من تاريح",
+            "dateTo": "حتى تاريخ",
+            "currentlyUnexpendableButton": "الحجز غير قابل للتمديد",
+            "extendReservationButton": "تمديد الحجز الحالي"
+        }
+    },
+    "equipmentsPage": {
+        "filters": "تصفية",
+        "clearFilters": "ازالة التصفية",
+        "companyFilter": "الشركة",
+        "typeFilter": "النوع",
+        "manufacturerFilter": "المصنع",
+        "workLocationFilter": "مكان العمل",
+        "fromFilter": "من",
+        "toFilter": "الى",
+        "fromFilterCancelButton": "الغاء",
+        "fromFilterOkButton": "موافق",
+        "toFilterCancelButton": "الغاء",
+        "toFilterOkButton": "موافق",
+        "globalFilter": "الاسم, الشركة, النوع, المصنع..",
+        "sortLabel": "ترتيب",
+        "equipmentCard": {
+            "reserveButton": "حجز",
+            "addToProjectButton": "اضافة الى مشروع"
+        },
+        "equipmentAddDialog": {
+            "addNewEquipment": "اضافة مركبة جديدة",
+            "productionDate": "تاريخ الإنتاج",
+            "licencePlate": "لوحة معدنية",
+            "registrationNumber": "رقم التسجيل",
+            "licenceNumber": "رقم الرخصة",
+            "manufacturer": "المصنع",
+            "serialNumber": "الرقم التسلسلي",
+            "cancel": "إلغاء",
+            "save": "حفظ"
+        },
+        "equipmentReserveDialog": {
+            "equipmentName": "اسم المعدة",
+            "type": "النوع",
+            "manufacturer": "المصنع",
+            "productionYear": "تاريخ التصنيع",
+            "reservationPeriod": "فترة الحجز",
+            "clearDates": "ازالة المدة",
+            "privetNote": "ملاحظة خاصة",
+            "location": "الموقع",
+            "requestForReservationButton": "طلب الحجز"
+        },
+        "projectListDialog": {
+            "selectProject": "اختر مشروع",
+            "needAnotherProjectList": "هل تحتاج إلى قائمة مشاريع أخرى؟",
+            "createNewOne": "انشاء مشروع جديد",
+            "projectsListTable": {
+                "projectListName": "المشروع",
+                "projectListFrom": "من",
+                "projectListTo": "الى"
+            },
+            "close": "اغلاق"
+        }
+    },
+    "projectCollectionsPage": {
+        "projectCollections": "مجموعات المشروع",
+        "searchPlaceholder": "بحث..",
+        "createNewcollectionPlaceholder": "انشاء مجموعة المشروع",
+        "projectListCardDetails": {
+            "dateFrom": "من تاريح",
+            "dateTo": "حتى تاريخ",
+            "editButton": "تعديل",
+            "deleteButton": "حذف",
+            "deletionConfirmationTitle": "تأكيد حذف قائمة المشروع",
+            "deletionConfirmationDescription": "سيتم حذف قائمة المشروع ، يرجى التأكيد للمتابعة؟",
+            "confirmButton": "تأكيد"
+        },
+        "projectListCreationDialog": {
+            "createNewProjectListTitle": "إنشاء قائمة مشروع جديدة",
+            "listName": "اسم القائمة",
+            "reservationPeriod": "فترة الحجز",
+            "clearDates": "الغاء المواعيد",
+            "privetNote": "ملاحظة",
+            "location": "الموقع:",
+            "createNewProjectListButton": "إنشاء قائمة مشروع جديدة"
+        }
+    },
+    "companiesPage": {
+        "companyName": "اسم الشركة",
+        "sort": "ترتيب",
+        "location": "الموقع",
+        "companyCard": {
+            "location": "الموقع",
+            "totalEquipments": "اجمالي المعدات",
+            "availableEquipments": "المعدات المتاحة",
+            "companyProfile": "معلومات الشركة"
+        }
+    },
+    "companyNavigation": {
+        "companyInfo": "معلومات الشركة",
+        "equipments": "المعدات"
+    },
+    "companyDetailsPage": {
+        "location": "الموقع",
+        "totalEquipments": "اجمالي المعدات",
+        "availableEquipments": "المعدات المتاحة",
+        "contactInfo": "معلومات التواصل"
+    },
+    "companyEquipmentsPage": {
+        "search": "بحث..",
+        "totalResults": "اجمالي النتائج",
+        "filters": "تصفية",
+        "clearFilters": "ازالة التصفية",
+        "typeFilter": "النوع",
+        "manufacturerFilter": "المصنع",
+        "statusFilter": "الحالة",
+        "workLocationFilter": "مكان العمل",
+        "fromFilter": "من",
+        "clearFromFilter": "ازالة",
+        "cancelFromFilter": "الغاء",
+        "okFromFilter": "موافق",
+        "toFilter": "الى",
+        "clearToFilter": "ازالة",
+        "cancelToFilter": "الغاء",
+        "okToFilter": "موافق",
+        "verifiedFilter": "تم التحقق",
+        "governmentJobReadyFilter": "الوظيفة الحكومية جاهزة",
+        "reserveButton": "حجز"
+    },
+    "requestForQuotationNavigation": {
+        "quotation": "المناقصات",
+        "bidding": "العروض"
+    },
+    "quotationListingPage": {
+        "search": "بحث..",
+        "type": "النوع",
+        "manufacturer": "المصنع",
+        "havingOffers": "الحصول على عروض",
+        "singleOffer": "عرض فردي",
+        "showHideColumns": "إظهار / إخفاء الأعمدة",
+        "selectColumns": "حدد الأعمدة",
+        "selectColumnsYouWantToView": "حدد الأعمدة التي تريد عرضها",
+        "close": "اغلاق",
+        "save": "حفظ",
+        "createRfq": "انشاء مناقصة",
+        "closeRfq": "اغلاق المناقصة",
+        "closeRequest": "اغلاق الطلب",
+        "closeRequestConfirmation": "هل أنت متأكد أنك تريد إغلاق هذا الطلب؟ ",
+        "closeRequestConfirmationCancel": "الغاء",
+        "closeRequestConfirmationClose": "اغلاق",
+        "rfqListTableHeaders": {
+            "note": "ملاحظة",
+            "type": "النوع",
+            "creationDate": "تاريخ الانشاء",
+            "location": "الموقع",
+            "from": "من",
+            "to": "الى",
+            "minProductionYear": "الحد الأدنى من تاريخ الإنتاج",
+            "manufacturer": "المصنع",
+            "offers": "العروض",
+            "status": "الحالة",
+            "actions": "أجراءات"
+        }
+    },
+    "requestForQuotationBiddingListPage": {
+        "search": "بحث..",
+        "type": "النوع",
+        "manufacturer": "المصنع",
+        "singleOffer": "عرض فردي",
+        "showHideColumn": "إظهار / إخفاء الأعمدة",
+        "selectColumns": "حدد الأعمدة",
+        "selectColumnsYouWantToView": "حدد الأعمدة التي تريد عرضها",
+        "close": "اغلاق",
+        "save": "حفظ",
+        "applyNow": "قدم الآن",
+        "biddingListTableHeaders": {
+            "company": "الشركة",
+            "note": "ملاحظة",
+            "creationDate": "تاريخ الانشاء",
+            "equipments": "المعدات",
+            "from": "من",
+            "to": "الى",
+            "location": "الموقع",
+            "type": "النوع",
+            "minProductionYear": "الحد الأدنى من تاريخ الإنتاج",
+            "manufacturer": "المصنع",
+            "status": "الحالة"
+        }
+    },
+    "requestForQuotationOffersPage": {
+        "back": "الرجوع للخلف",
+        "search": "بحث..",
+        "company": "الشركة",
+        "manufacturer": "المصنع",
+        "status": "الحالة",
+        "showHideColumns": "إظهار / إخفاء الأعمدة",
+        "offersTableHeaders": {
+            "company": "الشركة",
+            "createDate": "تاريخ الانشاء",
+            "manufacturer": "المصنع",
+            "price": "السعر",
+            "status": "الحالة",
+            "offeredEquipments": "عدد المعدات"
+        }
+    },
+    "requestForQuotationThreadPage": {
+        "backLinkToOffers": "عروض",
+        "backLinkToBidding": "مزايدات",
+        "emptyThreadMessage": "ابدأ بإرسال رسالة أدناه للتواصل ..",
+        "sendNewMessageButton": "ارسال",
+        "sendNewMessageLabel": "رسالة",
+        "modifyEquipmentsThreadAction": {
+            "newEquipment": "معدة جديدة",
+            "newEquipments": "معدات جديدة",
+            "removeEquipment": "معدة",
+            "removeEquipments": "معدات",
+            "viewButton": "عرض",
+            "changeDetails": "تفاصيل تغيير المعدات",
+            "loadingEquipments": "جاري عرض المعدات",
+            "close": "اغلاق",
+            "added": "مضافة",
+            "removed": "تم الازالة"
+        },
+        "updatePriceThreadAction": {
+            "updatePriceMessage": "تم تعديل السعر الى"
+        },
+        "updateStatusReceivedThreadAction": {
+            "updateStatusMessage": "تم تعديل الحالة الى",
+            "receivedStatus": "تلقى"
+        },
+        "updateStatusAcceptedThreadAction": {
+            "updateStatusMessage": "تم تعديل الحالة الى",
+            "acceptedStatus": "تم الموافقة"
+        },
+        "updateStatusRejectedThreadAction": {
+            "updateStatusMessage": "تم تعديل الحالة الى",
+            "rejectedStatus": "مرفوضة"
+        },
+        "updateStatusNewThreadAction": {
+            "updateStatusMessage": "تم تعديل الحالة الى",
+            "newStatus": "جديدة"
+        },
+        "updateStatusClosedThreadAction": {
+            "updateStatusMessage": "تم تعديل الحالة الى",
+            "closedStatus": "مغلقة"
+        },
+        "updateEquipmentCountThreadAction": {
+            "message": "تم تغيير المعدات المطلوبة من"
+        },
+        "equipmentsAndOffersSection": {
+            "heading": "المعدات والعرض",
+            "offeredEquipments": "المعدات المعروضة",
+            "totalPrice": "السعر الاجمالي",
+            "equipments": "المعدات",
+            "noEquipmentsOfferedYet": "لا توجد معدات معروضة حتى الآن."
+        },
+        "myRequestSection": {
+            "heading": "طلبي",
+            "requestedRequipments": "المعدات المطلوبة",
+            "type": "النوع",
+            "from": "من",
+            "fromCancel": "الغاء",
+            "fromOk": "موافق",
+            "to": "الى",
+            "toCancel": "الغاء",
+            "toOk": "موافق",
+            "manufacturer": "المصنع",
+            "productionYear": "تاريخ التصنيع",
+            "updateRequestButton": "تعديل الطلب"
+        },
+        "myOfferSection": {
+            "heading": "العرض المقدم",
+            "offeredEquipments": "المعدات المعروضة",
+            "from": "من",
+            "to": "الى",
+            "location": "الموقع",
+            "type": "النوع",
+            "totalPrice": "السعر الاجمالي",
+            "saveButton": "حفظ"
+        },
+        "equipmentsSection": {
+            "heading": "المعدات",
+            "equipments": "المعدات",
+            "modifyEquipments": "تعديل المعدات",
+            "totalEquipmentsThisThreadOffers": "إجمالي المعدات التي يقدمها هذا العرض",
+            "rFQTotalRequestedEquipments": "اجمالي المعدات المطلوبة",
+            "rFQAcceptedEquipmentsUntilNow": "اجمالي المعدات الموافق عليها",
+            "modifyEquipmentsDialog": {
+                "selected": "مختارة",
+                "search": "بحث..",
+                "WeCouldNotFoundAnyEquipmentsToOfferForThisRFQ": "لم نتمكن من العثور على أي معدات نعرضها لطلب عرض الأسعار هذا!",
+                "cancel": "الغاء",
+                "confirm": "تأكيد"
+            }
+        },
+        "requestSection": {
+            "heading": "الطلب"
+        }
+    },
+    "bidsPage": {
+        "search": "بحث..",
+        "type": "النوع",
+        "manufacturer": "المصنع",
+        "status": "الحالة",
+        "singleOfferOnly": "العرض الفردي فقط",
+        "withPriceOnly": "بالسعر فقط",
+        "showHideColumns": "إظهار / إخفاء الأعمدة",
+        "selectColumns": "حدد الأعمدة",
+        "selectColumnsYouWantToView": "حدد الأعمدة التي تريد عرضها",
+        "close": "اغلاق",
+        "save": "حفظ",
+        "bidsTableHeaders": {
+            "company": "الشركة",
+            "type": "النوع",
+            "creationDate": "تاريخ الانشاء",
+            "requestedEquipment": "المعدات المطلوبة",
+            "offeredEquipment": "المعدات المعروضة",
+            "location": "الموقع",
+            "from": "من",
+            "to": "الى",
+            "minProductionYear": "الحد الأدنى من تاريخ الإنتاج",
+            "manufacturer": "المصنع",
+            "price": "السعر",
+            "status": "الحالة"
+        }
+    }
+}
