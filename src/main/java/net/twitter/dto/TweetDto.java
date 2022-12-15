@@ -11,7 +11,6 @@ public class TweetDto {
     private int id;
     private String authorId;
     private String message;
-    private String title;
     private Date createdOn;
 
 }
