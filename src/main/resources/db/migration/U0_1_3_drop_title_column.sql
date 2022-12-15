@@ -1,0 +1,2 @@
+ALTER TABLE tweet
+ADD COLUMN title VARCHAR(60);
