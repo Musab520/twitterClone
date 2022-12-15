@@ -28,7 +28,7 @@ public class Auth0Plugin implements Plugin {
     private String defaultRedirectPath;
     private String loginPath;
     private String logoutPath;
-    private String scopes;
+    private String scopes = "";
     private String domain;
     private String clientId;
     private BiConsumer<Tokens, Claims> auth0Callback;
@@ -131,7 +131,7 @@ public class Auth0Plugin implements Plugin {
 
     public String buildAuthorizeUrl(Context ctx, String redirectUri) {
         return authenticationController.buildAuthorizeUrl(ctx.req, ctx.res, redirectUri)
-                .withScope(this.scopes)
+                .withScope(scopes)
                 .build();
     }
 

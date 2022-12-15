@@ -3,13 +3,12 @@ package net.twitter;
 import io.javalin.Javalin;
 import io.javalin.core.validation.JavalinValidation;
 import io.javalin.http.staticfiles.Location;
+import io.javalin.plugin.json.JavalinJackson;
 import io.javalin.plugin.rendering.vue.JavalinVue;
 import net.twitter.dto.UserDto;
 import net.twitter.infra.App;
 import net.twitter.infra.Configuration;
-import net.twitter.infra.JwtParser;
 import net.twitter.provider.JdbiProvider;
-import net.twitter.provider.JwtParserProvider;
 import net.twitter.route.Routes;
 import net.twitter.service.UserService;
 import org.apache.commons.lang3.StringUtils;
@@ -26,10 +25,8 @@ import java.text.ParseException;
 import java.time.Instant;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import static io.javalin.apibuilder.ApiBuilder.path;
 import static io.javalin.apibuilder.ApiBuilder.post;
 import static net.twitter.infra.Auth0Plugin.useAuth0Plugin;
 
@@ -41,8 +38,8 @@ public class TwitterApp implements App {
     public void init(int port) {
         setupFlyway();
         setupJdbi();
-        setupJavalinVue();
         configureJavalin(port);
+        setupJavalinVue();
     }
 
     @Override
@@ -63,6 +60,16 @@ public class TwitterApp implements App {
         this.javalin = Javalin.create(config -> {
             config.showJavalinBanner = true;
 
+            config.jsonMapper(new JavalinJackson());
+            config.addStaticFiles(staticFiles -> {
+                staticFiles.hostedPath = "/";
+                staticFiles.directory = "/public";
+                staticFiles.location = Location.CLASSPATH;
+                staticFiles.precompress = false;
+                staticFiles.aliasCheck = null;
+                staticFiles.skipFileFunction = req -> false;
+            });
+            config.enableWebjars();
             config.server(() -> {
                 Server server = new Server(port);
                 HttpConfiguration httpConfig = new HttpConfiguration();

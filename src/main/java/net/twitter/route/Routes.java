@@ -13,7 +13,7 @@ public class Routes implements EndpointGroup {
     @Override
     public void addEndpoints() {
         path("/", () -> {
-            get(new VueComponent("home"));
+            get(new VueComponent("home", null, new MapIncludesRenderer()));
         });
         path("api/users", () -> {
             post(UserController::addUser);

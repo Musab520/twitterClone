@@ -19,7 +19,7 @@ public class Configuration {
     private String auth0ClientId = "cli3nt";
     private String auth0ClientSecret = "s3cret";
     private String auth0Domain = "test.auth0";
-    private String requiredScope;
+    private String requiredScope = "profile email openid";
     private String dbUrl;
     private String dbUser;
     private String dbPassword;
