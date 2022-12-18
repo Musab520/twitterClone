@@ -6,13 +6,15 @@ import org.jdbi.v3.sqlobject.config.RegisterBeanMapper;
 import org.jdbi.v3.sqlobject.customizer.Bind;
 import org.jdbi.v3.sqlobject.customizer.BindBean;
 import org.jdbi.v3.sqlobject.locator.UseClasspathSqlLocator;
+import org.jdbi.v3.sqlobject.statement.GetGeneratedKeys;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 
 public interface TweetDao {
     @SqlUpdate
     @UseClasspathSqlLocator
-    void insert(@BindBean TweetDto tweetDto);
+    @GetGeneratedKeys
+    int insert(@BindBean TweetDto tweetDto);
 
     @SqlQuery
     @UseClasspathSqlLocator

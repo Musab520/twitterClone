@@ -17,7 +17,7 @@ public class TweetController {
         tweetDto.setAuthorId(ctx.sessionAttribute("user_id"));
         tweetDto.setCreatedOn(new Date());
         tweetDto.setMessage(tweetCreatedDto.getMessage());
-        TweetService.getInstance().addTweet(tweetDto);
+        ctx.json(TweetService.getInstance().addTweet(tweetDto));
     }
 
     public static void findTweet(Context ctx) {

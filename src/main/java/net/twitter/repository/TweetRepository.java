@@ -16,8 +16,8 @@ public class TweetRepository {
         return instance;
     }
 
-    public void insert(TweetDto tweetDto) {
-        daos().useTweetDao(tweetDao -> tweetDao.insert(tweetDto));
+    public int insert(TweetDto tweetDto) {
+        return daos().withTweetDao(tweetDao -> tweetDao.insert(tweetDto));
     }
 
     public TweetDto find(int id) {
