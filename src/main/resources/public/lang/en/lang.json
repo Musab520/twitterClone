@@ -2,25 +2,17 @@
     "homepage": {
         "navigation": {
             "homepage": "HOMEPAGE",
-            "equipments": "Equipments",
-            "companies": "Companies",
-            "rfqs": "RFQ's",
-            "portal": "PORTAL",
+            "newsFeed": "News Feed",
+            "profile": "Profile",
+            "Search": "SEARCH",
             "login": "Login",
             "username": "username",
             "userMenu": {
                 "profile": "Profile",
-                "companyInfo": "Company Info",
-                "myEquipments": "My Equipments",
-                "projectCollections": "Project Collections",
-                "history": "History",
-                "currentReservations": "Current Reservations",
-                "currentRentals": "Current Rentals",
-                "currentBids": "Current Bids",
                 "logout": "Logout"
             }
         },
-        "mainTitle": "EQUIPTAL",
+        "mainTitle": "TWITTER",
         "subTitle": "get all your equipments from",
         "subTitleHighlight": "one place",
         "searchButton": "Search",
