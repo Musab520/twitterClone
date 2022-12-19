@@ -1,5 +1,6 @@
 package net.twitter.provider;
 
+import net.twitter.dao.FollowerDao;
 import net.twitter.dao.TweetDao;
 import net.twitter.dao.UserDao;
 
@@ -36,6 +37,14 @@ public class DaoProvider {
 
     public <T> T withTweetDao(Function<TweetDao, T> function) {
         return JdbiProvider.instance().jdbi().withExtension(TweetDao.class, function::apply);
+    }
+
+    public void useFollowerDao(Consumer<FollowerDao> consumer) {
+        JdbiProvider.instance().jdbi().useExtension(FollowerDao.class, consumer::accept);
+    }
+
+    public <T> T withFollowerDao(Function<FollowerDao, T> function) {
+        return JdbiProvider.instance().jdbi().withExtension(FollowerDao.class, function::apply);
     }
 
 }

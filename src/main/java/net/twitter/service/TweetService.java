@@ -18,8 +18,8 @@ public class TweetService {
         return instance;
     }
 
-    public int addTweet(TweetDto userDto) {
-        return TweetRepository.getInstance().insert(userDto);
+    public int addTweet(TweetDto tweetDto) {
+        return TweetRepository.getInstance().insert(tweetDto);
     }
 
     public TweetDto findTweet(int id) {
