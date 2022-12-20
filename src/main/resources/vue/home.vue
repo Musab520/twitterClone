@@ -5,6 +5,14 @@
         <h1 class="main-title">
           {{ $trans('homepage.mainTitle') }}
         </h1>
+        <v-row ref="postTweetRow" no-gutters>
+          <v-text-field label="Post"  single-line outlined v-model="postQuery"></v-text-field>
+          <v-btn height="56px" class="ml-6 px-4" color="primary" @click="postTweet">
+                            <span class="material-symbols-outlined mr-2 ">
+                                Post Tweet
+                            </span>
+          </v-btn>
+        </v-row>
       </v-container>
     </v-overlay>
   </app-layout>
@@ -20,15 +28,7 @@ Vue.component("home", {
       formValidate: false,
       isDisabled: true,
       dialogCompanyRegistration: false,
-      searchQuery: '',
-      company: {
-        name: "",
-        mobile: ""
-      },
-      rules: {
-        name: [v => !!v || 'Name is required', v => /^.{8,}/.test(v) || "the  name must contain at least 8 characters\n"],
-        mobile: [v => !!v || 'Mobile is required', v => /^[+()\d- ]{9,16}/.test(v) || "Mobile number must be formatted"],
-      },
+      postQuery: '',
     }
   },
   created() {
@@ -40,7 +40,9 @@ Vue.component("home", {
   },
 
   methods: {
-
+    postTweet() {
+      fetch(`/api/tweets`, { method: 'POST', 'Content-Type': 'application/json', body: JSON.stringify({"message": this.postQuery})})
+    }
   }
 });
 </script>
