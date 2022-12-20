@@ -1,0 +1,1 @@
+INSERT INTO `likedTweet` (id, likedTweet_id, liker_id) VALUES (:id , :likedId , :likerId);

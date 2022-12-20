@@ -1,10 +1,7 @@
 package net.twitter.controller;
 
 import io.javalin.http.Context;
-import net.twitter.dto.FollowerCreatedDto;
-import net.twitter.dto.FollowerDto;
-import net.twitter.dto.TweetCreatedDto;
-import net.twitter.dto.TweetDto;
+import net.twitter.dto.*;
 import net.twitter.service.FollowerService;
 import net.twitter.service.TweetService;
 
@@ -16,7 +13,9 @@ public class FollowerController {
         FollowerDto followerDto = new FollowerDto();
         followerDto.setFollowerId(ctx.sessionAttribute("user_id"));
         followerDto.setFollowedId(followerCreatedDto.getFollowedId());
-        ctx.json(FollowerService.getInstance().addFollower(followerDto));
+        IdDto idDto = new IdDto();
+        idDto.setId(FollowerService.getInstance().addFollower(followerDto));
+        ctx.json(idDto);
     }
 
     public static void findFollower(Context ctx) {
