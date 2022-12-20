@@ -44,6 +44,8 @@
             </v-menu>
           </v-toolbar-title>
 
+
+
           <v-tabs v-model="tab" color="secondary" @change="handleChange" class="d-none d-md-flex justify-center">
             <v-tab exact exact-path href="/">
               {{ $trans('homepage.navigation.homepage') }}
@@ -102,8 +104,27 @@
 
         <div>
           <v-divider color="white"></v-divider>
-
-
+          <v-list-item class="hover-w-10">
+            <a :href=`/equipments` style="width:100%;height:56px;"
+               class="white--text text-decoration-none d-flex align-center">
+              <v-icon color="white" class="me-3">mdi-tractor-variant</v-icon>
+              {{ $trans('homepage.navigation.equipments') }}
+            </a>
+          </v-list-item>
+          <v-list-item class="hover-w-10">
+            <a :href=`/companies` style="width:100%;height:56px;"
+               class="white--text text-decoration-none d-flex align-center">
+              <v-icon color="white" class="me-3">mdi-domain</v-icon>
+              {{ $trans('homepage.navigation.companies') }}
+            </a>
+          </v-list-item>
+          <v-list-item class="hover-w-10">
+            <a :href=`/request-for-quotations` style="width:100%;height:56px;"
+               class="white--text text-decoration-none d-flex align-center">
+              <v-icon color="white" class="me-3">mdi-cash-clock </v-icon>
+              {{ $trans('homepage.navigation.rfqs') }}
+            </a>
+          </v-list-item>
           <v-divider color="white"></v-divider>
 
           <v-list-item class="hover-w-10 mt-2" style="flex:none" >
