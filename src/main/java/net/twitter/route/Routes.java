@@ -17,6 +17,9 @@ public class Routes implements EndpointGroup {
     public void addEndpoints() {
         path("/", () -> {
             get(new VueComponent("home", null, new MapIncludesRenderer()));
+            get("equipments", new VueComponent("equipments", null, new MapIncludesRenderer()));
+            get("companies", new VueComponent("companies"));
+            get("request-for-quotations", new VueComponent("request-for-quotation-list"));
         });
         path("api/users", () -> {
             post(UserController::addUser);
