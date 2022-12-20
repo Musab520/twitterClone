@@ -3,6 +3,7 @@ package net.twitter.route;
 import com.auth0.json.mgmt.users.User;
 import io.javalin.apibuilder.EndpointGroup;
 import net.twitter.controller.FollowerController;
+import net.twitter.controller.LikedTweetController;
 import net.twitter.controller.TweetController;
 import io.javalin.plugin.rendering.vue.VueComponent;
 import net.twitter.controller.UserController;
@@ -30,6 +31,10 @@ public class Routes implements EndpointGroup {
         path("api/followers", () -> {
             get("{id}", FollowerController::findFollower);
             post(FollowerController::addFollower);
+        });
+        path("api/likedTweets", () -> {
+            get("{id}", LikedTweetController::findLikedTweet);
+            post(LikedTweetController::addLikedTweet);
         });
     }
 }
