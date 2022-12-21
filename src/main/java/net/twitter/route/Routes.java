@@ -24,6 +24,7 @@ public class Routes implements EndpointGroup {
         path("api/users", () -> {
             post(UserController::addUser);
             get("{userId}", UserController::findUser);
+            get("{username}", UserController::findUserByUsername);
             put("{userId}", UserController::updateUser);
         });
 
