@@ -28,4 +28,14 @@ public interface TweetDao {
     @RegisterBeanMapper(TweetDto.class)
     List<TweetDto> listFriendsAndLikedFriendsTweets(@Bind("userId") String userId);
 
+    @SqlQuery
+    @UseClasspathSqlLocator
+    @RegisterBeanMapper(TweetDto.class)
+    List<TweetDto> listUserTweets(@Bind("userId") String userId);
+
+    @SqlQuery
+    @UseClasspathSqlLocator
+    @RegisterBeanMapper(TweetDto.class)
+    List<TweetDto> listTweets();
+
 }

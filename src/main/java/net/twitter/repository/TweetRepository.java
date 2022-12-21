@@ -1,5 +1,6 @@
 package net.twitter.repository;
 
+import net.twitter.dao.TweetDao;
 import net.twitter.dto.TweetDto;
 
 import java.util.List;
@@ -28,5 +29,13 @@ public class TweetRepository {
 
     public List<TweetDto> listFriendsAndLikedFriendsTweets(String userId) {
         return daos().withTweetDao(tweetDao -> tweetDao.listFriendsAndLikedFriendsTweets(userId));
+    }
+
+    public List<TweetDto> listUserTweets(String userId) {
+        return daos().withTweetDao(tweetDao -> tweetDao.listUserTweets(userId));
+    }
+
+    public List<TweetDto> listTweets() {
+        return daos().withTweetDao(TweetDao::listTweets);
     }
 }
