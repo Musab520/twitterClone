@@ -29,4 +29,8 @@ public class UserService {
     public void updateUser(String id, UserDto userDto) {
         UserRepository.getInstance().update(id, userDto);
     }
+
+    public UserDto findUserByUsername(String username) {
+        return UserRepository.getInstance().findUserByUsername(username);
+    }
 }

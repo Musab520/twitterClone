@@ -25,4 +25,13 @@ public class UserController {
             ctx.json(userDto);
         }
     }
+
+    public static void findUserByUsername(Context ctx) {
+        UserDto userDto = UserService.getInstance().findUserByUsername(ctx.pathParam("username"));
+        if (userDto == null) {
+            ctx.status(404);
+        } else {
+            ctx.json(userDto);
+        }
+    }
 }

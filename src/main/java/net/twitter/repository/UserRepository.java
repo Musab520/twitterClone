@@ -31,4 +31,8 @@ public class UserRepository {
     public void update(String id, UserDto userDto) {
         daos().useUserDao((userDao) -> userDao.update(id, userDto));
     }
+
+    public UserDto findUserByUsername(String username) {
+        return daos().withUserDao(userDao -> userDao.findUserByUsername(username));
+    }
 }

@@ -22,4 +22,11 @@ public interface UserDao {
     @UseClasspathSqlLocator
     @RegisterBeanMapper(UserDto.class)
     UserDto find(@Bind("id") String userId);
+
+    @SqlQuery
+    @UseClasspathSqlLocator
+    @RegisterBeanMapper(UserDto.class)
+    UserDto findUserByUsername(@Bind("username") String username);
+
+
 }
