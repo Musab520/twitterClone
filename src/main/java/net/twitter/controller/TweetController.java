@@ -10,6 +10,7 @@ import net.twitter.service.UserService;
 import org.apache.commons.lang3.time.DateUtils;
 
 import java.util.Date;
+import java.util.List;
 
 public class TweetController {
     public static void addTweet(Context ctx) {
@@ -29,6 +30,15 @@ public class TweetController {
             ctx.status(404);
         } else {
             ctx.json(tweetDto);
+        }
+    }
+
+    public static void listFriendsAndLikedFriendsTweets(Context ctx) {
+        List<TweetDto> tweetDtoList = TweetService.getInstance().listFriendsAndLikedFriendsTweets(ctx.sessionAttribute("user_id"));
+        if (tweetDtoList == null) {
+            ctx.status(404);
+        } else {
+            ctx.json(tweetDtoList);
         }
     }
 }

@@ -50,7 +50,7 @@
             <v-tab exact exact-path href="/">
               {{ $trans('homepage.navigation.homepage') }}
             </v-tab>
-            <v-tab exact exact-path href="/equipments">
+            <v-tab exact exact-path href="/tweets">
               {{ $trans('homepage.navigation.newsFeed') }}
             </v-tab>
             <v-tab exact exact-path href="/companies">
@@ -105,7 +105,7 @@
         <div>
           <v-divider color="white"></v-divider>
           <v-list-item class="hover-w-10">
-            <a :href=`/equipments` style="width:100%;height:56px;"
+            <a :href=`/tweets` style="width:100%;height:56px;"
                class="white--text text-decoration-none d-flex align-center">
               <v-icon color="white" class="me-3">mdi-tractor-variant</v-icon>
               {{ $trans('homepage.navigation.equipments') }}
