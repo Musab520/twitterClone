@@ -1,0 +1,1 @@
+SELECT * FROM `user` WHERE id in (SELECT follower_id FROM `follower` WHERE following_id=:userId);

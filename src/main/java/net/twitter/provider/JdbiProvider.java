@@ -10,7 +10,9 @@ public class JdbiProvider {
     private Jdbi jdbi = null;
     private static JdbiProvider instance = instance();
     private HikariDataSource dataSource;
+
     private JdbiProvider() {
+
     }
 
     public static JdbiProvider instance() {

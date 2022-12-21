@@ -26,13 +26,13 @@ public class Routes implements EndpointGroup {
             get("{userId}", UserController::findUser);
             get("{username}", UserController::findUserByUsername);
             put("{userId}", UserController::updateUser);
+            get("{userId}/tweets", TweetController::listUserTweets);
         });
 
         path("api/tweets", () -> {
             get("{tweetId}", TweetController::findTweet);
             post(TweetController::addTweet);
             get(TweetController::listTweets);
-            get("/users/{userId}", TweetController::listUserTweets);
         });
         path("api/followers", () -> {
             get("{id}", FollowerController::findFollower);

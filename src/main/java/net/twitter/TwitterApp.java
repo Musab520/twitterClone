@@ -91,6 +91,7 @@ public class TwitterApp implements App {
                     userDto.setId(jwsClaims.getSubject());
                     userDto.setEmail(jwsClaims.get("email", String.class));
                     userDto.setUsername(jwsClaims.get("email", String.class).split("@")[0]);
+                    userDto.setActive(true);
                     if (UserService.getInstance().findUser(jwsClaims.getSubject()) == null) {
                         UserService.getInstance().addUser(userDto);
                     }

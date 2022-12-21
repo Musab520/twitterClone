@@ -1,1 +1,1 @@
-SELECT * FROM `user` WHERE username = :username
+SELECT * FROM `user` WHERE username = :username;

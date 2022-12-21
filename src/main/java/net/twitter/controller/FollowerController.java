@@ -2,10 +2,12 @@ package net.twitter.controller;
 
 import io.javalin.http.Context;
 import net.twitter.dto.*;
+import net.twitter.repository.FollowerRepository;
 import net.twitter.service.FollowerService;
 import net.twitter.service.TweetService;
 
 import java.util.Date;
+import java.util.List;
 
 public class FollowerController {
     public static void addFollower(Context ctx) {
@@ -25,5 +27,13 @@ public class FollowerController {
         } else {
             ctx.json(followerDto);
         }
+    }
+
+    public List<UserDto> listUserFollowers(String userId) {
+        return FollowerService.getInstance().listUserFollowers(userId);
+    }
+
+    public void delete(String userId, String followingId) {
+        FollowerService.getInstance().delete(userId, followingId);
     }
 }
