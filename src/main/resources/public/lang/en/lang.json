@@ -149,7 +149,7 @@
         "globalFilter": "Name, Company, Type, Manufacture...",
         "sortLabel": "Sort",
         "equipmentCard": {
-            "reserveButton": "Reserve",
+            "reserveButton": "Follow",
             "addToProjectButton": "Add to project"
         },
         "equipmentAddDialog": {

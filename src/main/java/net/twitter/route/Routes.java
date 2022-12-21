@@ -17,7 +17,7 @@ public class Routes implements EndpointGroup {
     public void addEndpoints() {
         path("/", () -> {
             get(new VueComponent("home", null, new MapIncludesRenderer()));
-            get("equipments", new VueComponent("equipments", null, new MapIncludesRenderer()));
+            get("tweets", new VueComponent("tweets", null, new MapIncludesRenderer()));
             get("companies", new VueComponent("companies"));
             get("request-for-quotations", new VueComponent("request-for-quotation-list"));
         });
@@ -30,6 +30,7 @@ public class Routes implements EndpointGroup {
         path("api/tweets", () -> {
             get("{tweetId}", TweetController::findTweet);
             post(TweetController::addTweet);
+            get(TweetController::listFriendsAndLikedFriendsTweets);
         });
         path("api/followers", () -> {
             get("{id}", FollowerController::findFollower);
@@ -39,6 +40,7 @@ public class Routes implements EndpointGroup {
             get("{id}", LikedTweetController::findLikedTweet);
             post(LikedTweetController::addLikedTweet);
         });
+
     }
 }
 

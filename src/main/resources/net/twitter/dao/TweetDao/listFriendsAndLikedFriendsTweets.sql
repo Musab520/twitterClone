@@ -1,0 +1,1 @@
+SELECT * FROM tweet WHERE author_id IN (SELECT followed_id FROM `follower`,`likedTweet`  WHERE follower_id=:userId OR likedTweet_Id=followed_id);

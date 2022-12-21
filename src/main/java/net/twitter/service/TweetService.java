@@ -4,6 +4,8 @@ package net.twitter.service;
 import net.twitter.dto.TweetDto;
 import net.twitter.repository.TweetRepository;
 
+import java.util.List;
+
 public class TweetService {
     private static TweetService instance = null;
 
@@ -24,5 +26,9 @@ public class TweetService {
 
     public TweetDto findTweet(int id) {
         return TweetRepository.getInstance().find(id);
+    }
+
+    public List<TweetDto> listFriendsAndLikedFriendsTweets(String userId) {
+        return TweetRepository.getInstance().listFriendsAndLikedFriendsTweets(userId);
     }
 }
