@@ -6,6 +6,8 @@ import net.twitter.repository.TweetRepository;
 
 import java.util.List;
 
+import static net.twitter.provider.DaoProvider.daos;
+
 public class TweetService {
     private static TweetService instance = null;
 
@@ -30,5 +32,13 @@ public class TweetService {
 
     public List<TweetDto> listFriendsAndLikedFriendsTweets(String userId) {
         return TweetRepository.getInstance().listFriendsAndLikedFriendsTweets(userId);
+    }
+
+    public List<TweetDto> listUserTweets(String userId) {
+        return TweetRepository.getInstance().listUserTweets(userId);
+    }
+
+    public List<TweetDto> listTweets() {
+        return TweetRepository.getInstance().listTweets();
     }
 }

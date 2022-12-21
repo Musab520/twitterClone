@@ -1,0 +1,1 @@
+SELECT * FROM `tweet` WHERE author_id=:userId;

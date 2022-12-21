@@ -12,6 +12,8 @@ import org.apache.commons.lang3.time.DateUtils;
 import java.util.Date;
 import java.util.List;
 
+import static net.twitter.provider.DaoProvider.daos;
+
 public class TweetController {
     public static void addTweet(Context ctx) {
         TweetCreatedDto tweetCreatedDto = ctx.bodyAsClass(TweetCreatedDto.class);
@@ -35,6 +37,24 @@ public class TweetController {
 
     public static void listFriendsAndLikedFriendsTweets(Context ctx) {
         List<TweetDto> tweetDtoList = TweetService.getInstance().listFriendsAndLikedFriendsTweets(ctx.sessionAttribute("user_id"));
+        if (tweetDtoList == null) {
+            ctx.status(404);
+        } else {
+            ctx.json(tweetDtoList);
+        }
+    }
+
+    public static void listUserTweets(Context ctx) {
+        List<TweetDto> tweetDtoList = TweetService.getInstance().listUserTweets(ctx.sessionAttribute("user_id"));
+        if (tweetDtoList == null) {
+            ctx.status(404);
+        } else {
+            ctx.json(tweetDtoList);
+        }
+    }
+
+    public static void listTweets(Context ctx) {
+        List<TweetDto> tweetDtoList = TweetService.getInstance().listTweets();
         if (tweetDtoList == null) {
             ctx.status(404);
         } else {
